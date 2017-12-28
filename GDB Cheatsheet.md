@@ -39,7 +39,7 @@ Check registers including FPU, XMM, and MMX
 (gdb) info all-registers
 ```
 
-Disassemble in Intel syntax in GDB (default is AT&T)
+Disassemble using Intel syntax in GDB (default is AT&T)
 ```
 (gdb) set disassembly-flavor intel
 ```
