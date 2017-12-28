@@ -7,14 +7,19 @@ gdb /path/to/binary
 ```
 Run binary inside GDB
 ```
-(gdb)run
+(gdb) run
 ```
 Place breakpoint at main fucntion
 ```
-(gdb)break main
+(gdb) break main
 ```
 
 Check registers
 ```
-(gdb)info registers
+(gdb) info registers
+```
+
+Display content of given register
+```
+(gdb) display /x $<register name>
 ```
