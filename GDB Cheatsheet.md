@@ -1,5 +1,5 @@
 #### GDB Cheatsheet
-This is a quick commands reference for GDB (GNU Debugger).
+This is a quick command reference for GDB (GNU Debugger).
 
 Load binary into GDB
 ```
