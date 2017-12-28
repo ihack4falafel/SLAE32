@@ -39,6 +39,11 @@ Check registers including FPU, XMM, and MMX
 (gdb) info all-registers
 ```
 
+Check  the layout of process associated with binary running in GDB
+```
+(gdb) info proc mappings
+```
+
 Disassemble using Intel syntax in GDB (default is AT&T)
 ```
 (gdb) set disassembly-flavor intel
