@@ -23,3 +23,23 @@ Display content of given register
 ```
 (gdb) display /x $<register name>
 ```
+
+Disassemble given register
+```
+(gdb) disassemble $<register name>
+```
+
+Disassemble given function
+```
+(gdb) disassemble $<function name>
+```
+
+Check registers including FPU, XMM, and MMX
+```
+(gdb) info all-registers
+```
+
+Disassemble in Intel syntax in GDB (default is AT&T)
+```
+(gdb) set disassembly-flavor intel
+```
