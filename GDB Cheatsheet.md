@@ -1,50 +1,85 @@
 #### GDB Cheatsheet
 This is a quick command reference for GDB (GNU Debugger).
 
-Load binary into GDB
+load binary into GDB
 ```
 gdb /path/to/binary
 ```
-Run binary inside GDB
+run binary inside GDB
 ```
 (gdb) run
 ```
-Place breakpoint at main fucntion
+place breakpoint at main fucntion
 ```
 (gdb) break main
 ```
 
-Check registers
+check registers
 ```
 (gdb) info registers
 ```
 
-Display content of given register
+display content of given register
 ```
 (gdb) display /x $<register name>
 ```
 
-Disassemble given register
+disassemble given register
 ```
 (gdb) disassemble $<register name>
 ```
 
-Disassemble given function
+disassemble given function
 ```
 (gdb) disassemble $<function name>
 ```
 
-Check registers including FPU, XMM, and MMX
+check registers including FPU, XMM, and MMX
 ```
 (gdb) info all-registers
 ```
 
-Check  the layout of process associated with binary running in GDB
+check  the layout of process associated with binary running in GDB
 ```
 (gdb) info proc mappings
 ```
 
-Disassemble using Intel syntax in GDB (default is AT&T)
+disassemble using Intel syntax in GDB (default is AT&T)
 ```
 (gdb) set disassembly-flavor intel
 ```
+
+step into instruction
+```
+(gdb) stepi
+```
+
+examine memory for given address and print content as string
+```
+(gdb) x/s <memory address>
+```
+
+list function in binary such as main
+```
+(gdb) info functions
+```
+
+execute shell command from gdb
+```
+(gdb) shell <command here>
+```
+
+list variables in binary
+```
+(gdb) info variables
+```
+
+examine first byte value of given variable
+```
+(gdb) x/xb &<variable name>
+```
+
+
+
+
+
