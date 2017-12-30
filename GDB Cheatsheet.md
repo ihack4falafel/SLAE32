@@ -5,10 +5,12 @@ load binary into GDB
 ```
 gdb /path/to/binary
 ```
+
 run binary inside GDB
 ```
 (gdb) run
 ```
+
 place breakpoint at main fucntion
 ```
 (gdb) break main
@@ -69,7 +71,7 @@ execute shell command from gdb
 (gdb) shell <command here>
 ```
 
-list variables in binary
+list global and static variables in binary
 ```
 (gdb) info variables
 ```
@@ -79,7 +81,22 @@ examine first byte value of given variable
 (gdb) x/xb &<variable name>
 ```
 
+list source file (usually prints code in and around main function)
+```
+(gdb) list
+```
 
+list source file and start from given line number
+```
+(gdb) list <line number>
+```
 
+examine local variables of binary
+```
+(gdb) info scope <local variable name>
+```
 
-
+load symbol file in GDB
+```
+(gdb) symbol-file <filename>
+```
