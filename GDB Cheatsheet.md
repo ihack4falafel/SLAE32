@@ -8,7 +8,7 @@ gdb /path/to/binary
 
 run binary inside GDB
 ```php
-(gdb) run
+(gdb) run <binary required arguments>
 ```
 
 place breakpoint at main fucntion
@@ -19,11 +19,6 @@ place breakpoint at main fucntion
 check registers
 ```php
 (gdb) info registers
-```
-
-display content of given register
-```php
-(gdb) display /x $<register name>
 ```
 
 disassemble given register
@@ -99,4 +94,44 @@ examine local variables of binary
 load symbol file in GDB
 ```php
 (gdb) symbol-file <filename>
+```
+
+list binary info and loaded sections
+```php
+(gdb) info files
+```
+
+list breakpoints
+```php
+(gdb) info breakpoints
+```
+
+disable breakpoint 
+```php
+(gdb) disable <breakpoint number>
+```
+
+enable breakpoint 
+```php
+(gdb) enable <breakpoint number>
+```
+
+delete breakpoint 
+```php
+(gdb) delete <breakpoint number>
+```
+
+examine memory for given address
+```php
+(gdb) x/<repeat count, format, size> <address>
+```
+
+examine memory for given variable (used register for this example)
+```php
+(gdb) x/<repeat count, format, size> $<register name>
+```
+
+continue execution after hitting breakpoint
+```php
+(gdb) continue
 ```
