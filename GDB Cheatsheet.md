@@ -86,9 +86,9 @@ list source file and start from given line number
 (gdb) list <line number>
 ```
 
-examine local variables of binary
+examine local variables of given function
 ```php
-(gdb) info scope <local variable name>
+(gdb) info scope <function name>
 ```
 
 load symbol file in GDB
@@ -134,4 +134,39 @@ examine memory for given variable (used register for this example)
 continue execution after hitting breakpoint
 ```php
 (gdb) continue
+```
+
+change data at runtime
+```php
+(gdb) set {<data type>} <address> = <value>
+```
+
+change register at runtime
+```php
+(gdb) set $<register name> = <value>
+```
+
+change variable at runtime
+```php
+(gdb) set <variable name> = <value>
+```
+
+get address of given function
+```php
+(gdb) print <function name>
+```
+
+invoke function at runtime
+```php
+(gdb) call <function name($args)>
+```
+
+set breakpoint at given address
+```php
+(gdb) break *<address>
+```
+
+set conditional breakpoint that only applies when certian pre-set condition is met
+```php
+(gdb) condition <breakpoint number> <variable> == <value>
 ```
