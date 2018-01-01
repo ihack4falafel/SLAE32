@@ -170,3 +170,15 @@ set conditional breakpoint that only applies when certian pre-set condition is m
 ```php
 (gdb) condition <breakpoint number> <variable> == <value>
 ```
+
+set of commands to be executed every time execution halt
+```php
+(gdb) define hook-stop
+Type commands for definition of "hook-stop".
+End with a line saying just "end".
+><command 1>
+><command 2>
+><command 3>
+>end
+(gdb) 
+```
