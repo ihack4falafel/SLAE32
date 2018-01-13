@@ -46,7 +46,7 @@ _start:
     ; #define SYS_BIND 2
     pop ebx
 
-    pop edi  ; = 1
+    pop edi
 
     ; push NULL for sin_addr
     push edx
