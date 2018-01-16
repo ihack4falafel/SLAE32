@@ -18,7 +18,7 @@ Y  = '\033[33m' # Yellow  #
 
 # Check port input
 if len(sys.argv) < 2:
-  print Y+ "Usage               :" + P+  " python BindShell.py <target IP>" +W
+  print Y+ "Usage               :" + P+  " python BindShell.py <port>     " +W
   print Y+ "Example             :" + P+  " python BindShell.py 1337       " +W
   sys.exit(0)
 
