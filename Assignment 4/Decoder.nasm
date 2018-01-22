@@ -26,7 +26,7 @@ decode:
     jz decoded_shellcode         ; if zero jump to decoded_shellcode
     shr ax, 1                    ; shift encoded_shellcode to right by one bit, one word at a time	
     sub ax, 13                   ; substract 13 from encoded_shellcode, one word at a time
-    mov [edi], al		     ; move decoded byte to EDI	
+    mov [edi], al                ; move decoded byte to EDI	
     inc esi                      ; point to the next encoded_shellcode word
     inc esi
     inc edi                      ; point to the next decoded_shellcode byte
