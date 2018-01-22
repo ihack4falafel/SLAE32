@@ -4,7 +4,7 @@ section .text
 
 _start:
     ;
-    ; [ROT-13 + SHL-1 + XOR-1337] encoded execve() code block
+    ; [ROT-N + SHL-N + XOR-N] encoded execve() code block
     ;
     jmp short call_decoder       ; jump to call_decoder to save encoded_shellcode pointer to ESI
 	
