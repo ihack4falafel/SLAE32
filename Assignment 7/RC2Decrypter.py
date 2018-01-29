@@ -12,7 +12,7 @@ if (success != True):
 crypt.put_CryptAlgorithm("rc2")                                                  # set the encryption algorithm to "rc2"
 crypt.put_CipherMode("cbc")                                                      # set cipher mode to "cbc"
 crypt.put_KeyLength(128)                                                         # set key length 128-bit
-crypt.put_Rc2EffectiveKeyLength(128)                                             #  
+crypt.put_Rc2EffectiveKeyLength(128)                                             #
 crypt.put_PaddingScheme(0)                                                       # take care of padding
 crypt.put_EncodingMode("hex")                                                    # set encoding mode to HEX
 ivHex = "0001020304050607"                                                       # setup initialization vector for CBC mode.
